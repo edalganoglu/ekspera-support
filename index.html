@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekspera - Destek Merkezi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4f85f6 0%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #f1f5f9;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 48px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(79, 133, 246, 0.3);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #f1f5f9;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            margin-bottom: 48px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(79, 133, 246, 0.15) 0%, rgba(96, 165, 250, 0.1) 100%);
+            border: 1px solid rgba(79, 133, 246, 0.3);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(79, 133, 246, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .contact-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: #4f85f6;
+        }
+
+        .contact-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #f1f5f9;
+        }
+
+        .contact-text {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: #4f85f6;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .contact-email:hover {
+            background: #3b6fd9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(79, 133, 246, 0.3);
+        }
+
+        /* Info Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .info-card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .info-card-title {
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+
+        .info-card-text {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #4f85f6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 24px 16px;
+            }
+
+            .contact-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">Ekspera</div>
+            <p class="tagline">Emlak Yatırım Analiz Uygulaması</p>
+        </header>
+
+        <!-- Quick Info -->
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-card-icon">📱</div>
+                <div class="info-card-title">iOS Uygulaması</div>
+                <div class="info-card-text">App Store'da mevcut</div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">⚡</div>
+                <div class="info-card-title">Hızlı Yanıt</div>
+                <div class="info-card-text">24 saat içinde dönüş</div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">🔒</div>
+                <div class="info-card-title">Güvenli</div>
+                <div class="info-card-text">Verileriniz korunur</div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Ekspera nasıl çalışır?</div>
+                <div class="faq-answer">Mülk bilgilerinizi (fiyat, kira, aidat vb.) girin ve Ekspera anında ROI, amortisman süresi, aylık nakit akışı gibi detaylı yatırım metriklerini hesaplar.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kredi sistemi nasıl işliyor?</div>
+                <div class="faq-answer">Her analiz 2 kredi harcar. Başlangıçta ücretsiz krediler verilir. Ek kredi paketlerini uygulama içinden satın alabilirsiniz.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">PDF raporları nasıl oluşturulur?</div>
+                <div class="faq-answer">Analiz sonuç ekranında "PDF Oluştur" butonuna tıklayın. Profesyonel formatlanmış raporunuz anında hazırlanır ve paylaşabilirsiniz.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Verilerim güvende mi?</div>
+                <div class="faq-answer">Evet. Tüm veriler şifreli olarak saklanır ve üçüncü taraflarla paylaşılmaz. Hesabınızı istediğiniz zaman silebilirsiniz.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Hesabımı nasıl silebilirim?</div>
+                <div class="faq-answer">Uygulama içinde Profil → Ayarlar → Hesabı Sil seçeneğini kullanabilir veya bize e-posta gönderebilirsiniz.</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2 class="section-title">İletişim</h2>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </div>
+                <h3 class="contact-title">Bize Ulaşın</h3>
+                <p class="contact-text">Sorularınız, önerileriniz veya geri bildirimleriniz için bize yazın. En kısa sürede yanıtlayacağız.</p>
+                <a href="mailto:support@ekspera.app" class="contact-email">support@ekspera.app</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Ekspera. Tüm hakları saklıdır.</p>
+            <p style="margin-top: 8px;">
+                <a href="privacy.html">Gizlilik Politikası</a> · 
+                <a href="terms.html">Kullanım Koşulları</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
