@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekspera - Hesap Silme</title>
+    <meta name="description" content="Ekspera hesabınızı nasıl silebileceğinizi öğrenin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            min-height: 100vh;
+            color: #e2e8f0;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4f85f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: #4f85f6;
+            background: rgba(79, 133, 246, 0.1);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: #f1f5f9;
+            margin: 32px 0 16px 0;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            color: #94a3b8;
+            margin-bottom: 16px;
+        }
+
+        ul,
+        ol {
+            color: #94a3b8;
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: #f1f5f9;
+        }
+
+        a {
+            color: #4f85f6;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #fca5a5;
+        }
+
+        .step-card {
+            background: rgba(79, 133, 246, 0.1);
+            border: 1px solid rgba(79, 133, 246, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: #4f85f6;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 700;
+            margin-right: 12px;
+        }
+
+        .step-title {
+            color: #f1f5f9;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .step-desc {
+            color: #94a3b8;
+            margin-top: 8px;
+            margin-left: 44px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #4f85f6;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .contact-btn:hover {
+            background: #3b6fd9;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
+        }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">Ekspera</div>
+        </header>
+        <nav class="nav">
+            <a href="index.html">Destek</a>
+            <a href="privacy.html">Gizlilik</a>
+            <a href="terms.html">Kullanım Koşulları</a>
+            <a href="delete-account.html" class="active">Hesap Silme</a>
+        </nav>
+        <h1>Hesap Silme Talimatları</h1>
+        <div class="content">
+            <h2>Hesabınızı Nasıl Silebilirsiniz?</h2>
+            <p>Ekspera hesabınızı iki yöntemle silebilirsiniz:</p>
+
+            <h2>Yöntem 1: Uygulama İçinden (Önerilen)</h2>
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <span class="step-title">Ekspera uygulamasını açın</span>
+                <p class="step-desc">iOS cihazınızda Ekspera uygulamasını başlatın.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <span class="step-title">Profil sekmesine gidin</span>
+                <p class="step-desc">Alt menüden "Profil" sekmesine dokunun.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <span class="step-title">Güvenlik ayarlarını açın</span>
+                <p class="step-desc">"Güvenlik" veya "Hesap Ayarları" bölümüne gidin.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <span class="step-title">Hesabı Sil butonuna tıklayın</span>
+                <p class="step-desc">"Hesabı Sil" seçeneğine dokunun ve onaylayın.</p>
+            </div>
+
+            <h2>Yöntem 2: E-posta ile Talep</h2>
+            <p>Hesabınızı e-posta yoluyla da silebilirsiniz:</p>
+            <ol>
+                <li>Kayıtlı e-posta adresinizden bize yazın</li>
+                <li>Konu: "Hesap Silme Talebi"</li>
+                <li>Hesabınıza kayıtlı e-posta adresini belirtin</li>
+            </ol>
+            <a href="mailto:ersah.dalganoglu@gmail.com?subject=Hesap%20Silme%20Talebi" class="contact-btn">Hesap Silme
+                Talebi Gönder</a>
+
+            <div class="warning-box">
+                <p>⚠️ <strong>Önemli Uyarılar:</strong></p>
+                <p style="margin-top: 8px;">• Hesap silme işlemi geri alınamaz</p>
+                <p>• Tüm analiz geçmişiniz ve raporlarınız silinir</p>
+                <p>• Kullanılmamış krediler iade edilmez</p>
+                <p>• İşlem 30 gün içinde tamamlanır</p>
+            </div>
+
+            <h2>Silinen Veriler</h2>
+            <p>Hesabınız silindiğinde aşağıdaki veriler kalıcı olarak kaldırılır:</p>
+            <ul>
+                <li>Profil bilgileriniz (ad, e-posta, fotoğraf)</li>
+                <li>Tüm emlak analizleriniz</li>
+                <li>Oluşturduğunuz PDF raporları</li>
+                <li>Kredi bakiyeniz ve satın alma geçmişiniz</li>
+                <li>Uygulama ayarlarınız</li>
+            </ul>
+
+            <h2>Sorularınız mı var?</h2>
+            <p>Hesap silme hakkında sorularınız için bize ulaşın:</p>
+            <p><a href="mailto:ersah.dalganoglu@gmail.com">ersah.dalganoglu@gmail.com</a></p>
+        </div>
+        <footer class="footer">
+            <p>© 2026 Ekspera. Tüm hakları saklıdır.</p>
+            <div class="footer-links">
+                <a href="index.html">Destek</a>
+                <a href="privacy.html">Gizlilik</a>
+                <a href="terms.html">Kullanım Koşulları</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
