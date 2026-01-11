@@ -4,447 +4,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekspera - Destek Merkezi</title>
+    <title>Ekspera - Akıllı Emlak Yatırım Analizi</title>
     <meta name="description"
-        content="Ekspera emlak yatırım analiz uygulaması destek merkezi. Sıkça sorulan sorular, iletişim ve yardım.">
+        content="Ekspera ile emlak yatırımlarınızı profesyonelce analiz edin. ROI hesaplama, kredi simülasyonu ve detaylı PDF raporları.">
+    <meta name="keywords" content="emlak yatırım, roi hesaplama, gayrimenkul analiz, konut yatırımı, kira getirisi">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Fonts - Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            min-height: 100vh;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #4f85f6 0%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 8px;
-        }
-
-        .tagline {
-            color: #94a3b8;
-            font-size: 1.1rem;
-        }
-
-        /* Navigation */
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-        }
-
-        .nav a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .nav a:hover,
-        .nav a.active {
-            color: #4f85f6;
-            background: rgba(79, 133, 246, 0.1);
-        }
-
-        /* Section Title */
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-            color: #f1f5f9;
-        }
-
-        /* Info Cards */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-bottom: 48px;
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 24px;
-            text-align: center;
-            transition: all 0.2s ease;
-        }
-
-        .info-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(79, 133, 246, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .info-card-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-
-        .info-card-title {
-            font-weight: 600;
-            color: #f1f5f9;
-            margin-bottom: 4px;
-        }
-
-        .info-card-text {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            margin-bottom: 48px;
-        }
-
-        .faq-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin-bottom: 16px;
-            transition: all 0.2s ease;
-        }
-
-        .faq-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(79, 133, 246, 0.3);
-        }
-
-        .faq-question {
-            font-weight: 600;
-            font-size: 1rem;
-            color: #f1f5f9;
-            margin-bottom: 8px;
-        }
-
-        .faq-answer {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            margin-bottom: 48px;
-        }
-
-        .contact-card {
-            background: linear-gradient(135deg, rgba(79, 133, 246, 0.15) 0%, rgba(96, 165, 250, 0.1) 100%);
-            border: 1px solid rgba(79, 133, 246, 0.3);
-            border-radius: 16px;
-            padding: 32px;
-            text-align: center;
-        }
-
-        .contact-icon {
-            width: 64px;
-            height: 64px;
-            background: rgba(79, 133, 246, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-
-        .contact-icon svg {
-            width: 32px;
-            height: 32px;
-            fill: #4f85f6;
-        }
-
-        .contact-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #f1f5f9;
-        }
-
-        .contact-text {
-            color: #94a3b8;
-            margin-bottom: 20px;
-        }
-
-        .contact-email {
-            display: inline-block;
-            background: #4f85f6;
-            color: white;
-            padding: 14px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .contact-email:hover {
-            background: #3b6fd9;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(79, 133, 246, 0.3);
-        }
-
-        /* Features Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 48px;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 28px;
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(79, 133, 246, 0.15);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            font-size: 1.5rem;
-        }
-
-        .feature-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #f1f5f9;
-            margin-bottom: 8px;
-        }
-
-        .feature-desc {
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        .footer a {
-            color: #4f85f6;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-links {
-            margin-top: 16px;
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .logo {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 24px 16px;
-            }
-
-            .contact-card {
-                padding: 24px;
-            }
-
-            .nav {
-                gap: 12px;
-            }
-
-            .nav a {
-                padding: 6px 12px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo">Ekspera</div>
-            <p class="tagline">Emlak Yatırım Analiz Uygulaması</p>
-        </header>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Ekspera" class="logo-img">
+            </a>
 
-        <!-- Navigation -->
-        <nav class="nav">
-            <a href="index.html" class="active">Destek</a>
-            <a href="privacy.html">Gizlilik</a>
-            <a href="terms.html">Kullanım Koşulları</a>
-            <a href="delete-account.html">Hesap Silme</a>
-        </nav>
+            <button class="nav-toggle" aria-label="Menüyü aç" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <!-- Quick Info -->
-        <div class="info-grid">
-            <div class="info-card">
-                <div class="info-card-icon">📱</div>
-                <div class="info-card-title">iOS Uygulaması</div>
-                <div class="info-card-text">App Store'da mevcut</div>
-            </div>
-            <div class="info-card">
-                <div class="info-card-icon">⚡</div>
-                <div class="info-card-title">Hızlı Yanıt</div>
-                <div class="info-card-text">24 saat içinde dönüş</div>
-            </div>
-            <div class="info-card">
-                <div class="info-card-icon">🔒</div>
-                <div class="info-card-title">Güvenli</div>
-                <div class="info-card-text">Verileriniz korunur</div>
-            </div>
-            <div class="info-card">
-                <div class="info-card-icon">🇹🇷</div>
-                <div class="info-card-title">Türkçe Destek</div>
-                <div class="info-card-text">7/24 Türkçe destek</div>
-            </div>
+            <nav class="nav-main" id="mainNav">
+                <a href="index.html" class="nav-link active">Ana Sayfa</a>
+                <a href="#features" class="nav-link">Özellikler</a>
+                <a href="#faq" class="nav-link">SSS</a>
+                <a href="privacy.html" class="nav-link">Gizlilik</a>
+                <a href="terms.html" class="nav-link">Koşullar</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Features -->
-        <section class="features-section">
-            <h2 class="section-title">Uygulama Özellikleri</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">ROI Hesaplama</h3>
-                    <p class="feature-desc">Satış fiyatı, kira geliri ve giderlerinizi girerek anında yatırım getirisi
-                        hesaplayın.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="logo.png" alt="Ekspera Logo" class="hero-logo">
+                    <h1 class="hero-title">
+                        Emlak yatırımlarınız için<br>
+                        <span>akıllı analiz</span> platformu
+                    </h1>
+                    <p class="hero-subtitle">
+                        Satın almadan önce düşünün. Ekspera ile mülkünüzün yatırım potansiyelini
+                        detaylı metriklerle analiz edin, kredi hesaplayın ve profesyonel raporlar oluşturun.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="https://apps.apple.com/app/ekspera" class="btn btn-primary" target="_blank">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            App Store'da İndir
+                        </a>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏦</div>
-                    <h3 class="feature-title">Kredi Hesaplayıcı</h3>
-                    <p class="feature-desc">Peşinat, faiz oranı ve vade seçenekleriyle aylık taksit tutarınızı görün.
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section--compact">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="stat-label">Detaylı Analiz</div>
+                        <div class="stat-value">15+ Metrik</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="stat-label">Hızlı Hesaplama</div>
+                        <div class="stat-value">Anında Sonuç</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="stat-label">PDF Rapor</div>
+                        <div class="stat-value">Profesyonel</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-headset"></i></div>
+                        <div class="stat-label">Türkçe Destek</div>
+                        <div class="stat-value">7/24</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Özellikler</span>
+                    <h2 class="section-title">Yatırım kararlarınızı veriye dayandırın</h2>
+                    <p class="section-desc">
+                        Ekspera, emlak yatırımcıları için tasarlanmış kapsamlı bir analiz aracıdır.
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3 class="feature-title">Piyasa Karşılaştırması</h3>
-                    <p class="feature-desc">Mülkünüzün m² fiyatını bölgesel ortalamalarla karşılaştırın.</p>
+
+                <div class="features-grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="card-title">ROI Hesaplama</h3>
+                        <p class="card-text">
+                            Satış fiyatı, kira geliri ve giderlerinizi girerek anında yatırım getirisi,
+                            nakit akışı ve amortisman süresini hesaplayın.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                        <h3 class="card-title">Kredi Simülasyonu</h3>
+                        <p class="card-text">
+                            Peşinat, faiz oranı ve vade seçenekleriyle aylık taksit tutarınızı görün.
+                            Farklı senaryoları karşılaştırın.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3 class="card-title">Piyasa Karşılaştırması</h3>
+                        <p class="card-text">
+                            Mülkünüzün m² fiyatını bölgesel ortalamalarla karşılaştırın.
+                            Fiyatın piyasaya göre konumunu anlayın.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3 class="card-title">PDF Raporları</h3>
+                        <p class="card-text">
+                            Tüm analiz verilerini içeren profesyonel PDF raporları oluşturun
+                            ve müşterilerinizle paylaşın.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-coins"></i></div>
+                        <h3 class="card-title">Maliyet Analizi</h3>
+                        <p class="card-text">
+                            Tapu harcı, KDV, komisyon ve devir masraflarını otomatik hesaplayın.
+                            Gizli maliyetleri görün.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+                        <h3 class="card-title">Analiz Geçmişi</h3>
+                        <p class="card-text">
+                            Tüm analizlerinizi kaydedin ve istediğiniz zaman tekrar inceleyin.
+                            Farklı mülkleri karşılaştırın.
+                        </p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📄</div>
-                    <h3 class="feature-title">PDF Raporları</h3>
-                    <p class="feature-desc">Profesyonel PDF raporları oluşturun ve müşterilerinizle paylaşın.</p>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section--compact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Nasıl Çalışır</span>
+                    <h2 class="section-title">3 adımda yatırım analizi</h2>
+                </div>
+
+                <div class="features-grid" style="max-width: 900px; margin: 0 auto;">
+                    <div class="card">
+                        <div class="card-icon" style="background: rgba(34, 197, 94, 0.12); color: #22c55e;"><i
+                                class="fas fa-edit"></i></div>
+                        <h3 class="card-title">Mülk bilgilerini girin</h3>
+                        <p class="card-text">
+                            Satış fiyatı, aylık kira, aidat ve bölge bilgilerini girin.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;"><i
+                                class="fas fa-search-dollar"></i></div>
+                        <h3 class="card-title">Analizi inceleyin</h3>
+                        <p class="card-text">
+                            ROI, nakit akışı, amortisman süresi ve diğer metrikleri görün.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon" style="background: rgba(79, 133, 246, 0.12); color: #4f85f6;"><i
+                                class="fas fa-file-export"></i></div>
+                        <h3 class="card-title">Rapor oluşturun</h3>
+                        <p class="card-text">
+                            Profesyonel PDF raporu oluşturun ve paylaşın.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Sıkça Sorulan Sorular</span>
+                    <h2 class="section-title">Merak edilenler</h2>
+                </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Ekspera nasıl çalışır?</div>
-                <div class="faq-answer">Mülk bilgilerinizi (fiyat, kira, aidat vb.) girin ve Ekspera anında ROI,
-                    amortisman süresi, aylık nakit akışı gibi detaylı yatırım metriklerini hesaplar.</div>
-            </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Ekspera nasıl çalışır?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Mülk bilgilerinizi (fiyat, kira, aidat vb.) girin ve Ekspera anında ROI,
+                            amortisman süresi, aylık nakit akışı gibi detaylı yatırım metriklerini hesaplar.
+                            Tüm hesaplamalar şeffaf ve anlaşılır formüllerle sunulur.
+                        </div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Kredi sistemi nasıl işliyor?</div>
-                <div class="faq-answer">Her analiz 2 kredi harcar. Başlangıçta ücretsiz krediler verilir. Ek kredi
-                    paketlerini uygulama içinden satın alabilirsiniz.</div>
-            </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Kredi sistemi nasıl işliyor?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Her analiz 2 kredi harcar, PDF rapor oluşturma ise 10 kredi harcar.
+                            Başlangıçta ücretsiz krediler verilir. Ek kredi paketlerini uygulama içinden
+                            satın alabilirsiniz.
+                        </div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">PDF raporları nasıl oluşturulur?</div>
-                <div class="faq-answer">Analiz sonuç ekranında "PDF Oluştur" butonuna tıklayın. Profesyonel formatlanmış
-                    raporunuz anında hazırlanır ve paylaşabilirsiniz.</div>
-            </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            PDF raporları nasıl oluşturulur?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Analiz sonuç ekranında "PDF Oluştur" butonuna tıklayın. Profesyonel formatlanmış
+                            raporunuz anında hazırlanır. Raporu cihazınıza kaydedebilir veya doğrudan
+                            paylaşabilirsiniz.
+                        </div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Verilerim güvende mi?</div>
-                <div class="faq-answer">Evet. Tüm veriler şifreli olarak saklanır ve üçüncü taraflarla paylaşılmaz.
-                    Hesabınızı istediğiniz zaman silebilirsiniz.</div>
-            </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Verilerim güvende mi?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Evet, güvende. Tüm veriler SSL ile şifreli olarak iletilir ve güvenli sunucularda
+                            saklanır. Verileriniz üçüncü taraflarla paylaşılmaz. Hesabınızı istediğiniz zaman
+                            silebilirsiniz.
+                        </div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Hesabımı nasıl silebilirim?</div>
-                <div class="faq-answer">Uygulama içinde Profil → Güvenlik → Hesabı Sil seçeneğini kullanabilir veya <a
-                        href="delete-account.html" style="color: #4f85f6;">hesap silme sayfamızı</a> ziyaret
-                    edebilirsiniz.</div>
-            </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Hangi cihazlarda kullanabilirim?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Ekspera şu anda iOS cihazlarda (iPhone ve iPad) kullanılabilir.
+                            Android sürümü yakında yayınlanacaktır.
+                        </div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Ödeme bilgilerim güvende mi?</div>
-                <div class="faq-answer">Kredi kartı bilgileriniz bizde saklanmaz. Tüm ödemeler Apple'ın güvenli
-                    altyapısı üzerinden işlenir.</div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Hesabımı nasıl silebilirim?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Uygulama içinde Profil → Güvenlik → Hesabı Sil seçeneğini kullanabilir veya
+                            <a href="delete-account.html">hesap silme sayfamızı</a> ziyaret edebilirsiniz.
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-section">
-            <h2 class="section-title">İletişim</h2>
-
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
+        <section class="section--compact" id="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3 class="contact-title">Yardıma mı ihtiyacınız var?</h3>
+                    <p class="contact-text">
+                        Sorularınız, önerileriniz veya geri bildirimleriniz için bize yazın.<br>
+                        En kısa sürede yanıtlayacağız.
+                    </p>
+                    <a href="mailto:ersah.dalganoglu@gmail.com" class="btn btn-primary">
+                        E-posta Gönder
+                    </a>
                 </div>
-                <h3 class="contact-title">Bize Ulaşın</h3>
-                <p class="contact-text">Sorularınız, önerileriniz veya geri bildirimleriniz için bize yazın.<br>En kısa
-                    sürede yanıtlayacağız.</p>
-                <a href="mailto:ersah.dalganoglu@gmail.com" class="contact-email">ersah.dalganoglu@gmail.com</a>
             </div>
         </section>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2026 Ekspera. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="privacy.html">Gizlilik Politikası</a>
-                <a href="terms.html">Kullanım Koşulları</a>
-                <a href="delete-account.html">Hesap Silme</a>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Ekspera">
+                </div>
+
+                <div class="footer-links">
+                    <a href="privacy.html" class="footer-link">Gizlilik Politikası</a>
+                    <a href="terms.html" class="footer-link">Kullanım Koşulları</a>
+                    <a href="delete-account.html" class="footer-link">Hesap Silme</a>
+                    <a href="mailto:ersah.dalganoglu@gmail.com" class="footer-link">İletişim</a>
+                </div>
             </div>
-        </footer>
-    </div>
+
+            <p class="footer-copy">
+                © 2026 Ekspera. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        function toggleNav() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('open');
+        }
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const item = button.parentElement;
+
+            // Close other items
+            document.querySelectorAll('.faq-item.open').forEach(el => {
+                if (el !== item) el.classList.remove('open');
+            });
+
+            // Toggle current item
+            item.classList.toggle('open');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

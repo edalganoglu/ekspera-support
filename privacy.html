@@ -4,299 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekspera - Gizlilik Politikası</title>
+    <title>Gizlilik Politikası - Ekspera</title>
     <meta name="description"
         content="Ekspera emlak yatırım analiz uygulaması gizlilik politikası. Verilerinizin nasıl toplandığını ve korunduğunu öğrenin.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Fonts - Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            min-height: 100vh;
-            color: #e2e8f0;
-            line-height: 1.8;
-        }
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #4f85f6 0%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-        }
-
-        .nav a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .nav a:hover,
-        .nav a.active {
-            color: #4f85f6;
-            background: rgba(79, 133, 246, 0.1);
-        }
-
-        h1 {
-            font-size: 1.75rem;
-            color: #f1f5f9;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .updated {
-            color: #64748b;
-            font-size: 0.9rem;
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .content {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 32px;
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            color: #f1f5f9;
-            margin: 32px 0 16px 0;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        h2:first-child {
-            margin-top: 0;
-        }
-
-        p {
-            color: #94a3b8;
-            margin-bottom: 16px;
-        }
-
-        ul {
-            color: #94a3b8;
-            margin-bottom: 16px;
-            padding-left: 24px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        strong {
-            color: #f1f5f9;
-        }
-
-        a {
-            color: #4f85f6;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .highlight-box {
-            background: rgba(79, 133, 246, 0.1);
-            border: 1px solid rgba(79, 133, 246, 0.2);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            color: #e2e8f0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        .footer-links {
-            margin-top: 16px;
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 600px) {
-            .content {
-                padding: 24px 20px;
-            }
-
-            .nav {
-                gap: 12px;
-            }
-
-            .nav a {
-                padding: 6px 12px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">Ekspera</div>
-        </header>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Ekspera" class="logo-img">
+            </a>
 
-        <nav class="nav">
-            <a href="index.html">Destek</a>
-            <a href="privacy.html" class="active">Gizlilik</a>
-            <a href="terms.html">Kullanım Koşulları</a>
-            <a href="delete-account.html">Hesap Silme</a>
-        </nav>
+            <button class="nav-toggle" aria-label="Menüyü aç" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <h1>Gizlilik Politikası</h1>
-        <p class="updated">Son güncelleme: Ocak 2026</p>
-
-        <div class="content">
-            <div class="highlight-box">
-                <p>🔒 Ekspera olarak gizliliğinizi ciddiye alıyoruz. Bu politika, kişisel verilerinizin nasıl
-                    toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
-            </div>
-
-            <h2>1. Toplanan Bilgiler</h2>
-            <p>Ekspera uygulamasını kullandığınızda aşağıdaki bilgiler toplanabilir:</p>
-            <ul>
-                <li><strong>Hesap Bilgileri:</strong> E-posta adresi, ad, profil fotoğrafı (isteğe bağlı)</li>
-                <li><strong>Kullanım Verileri:</strong> Uygulama içi etkileşimler, analiz geçmişi, oluşturulan raporlar
-                </li>
-                <li><strong>Cihaz Bilgileri:</strong> Cihaz tipi, işletim sistemi versiyonu, uygulama versiyonu</li>
-                <li><strong>Konum Verileri:</strong> Sadece analiz için girilen bölge bilgileri (GPS verisi toplanmaz)
-                </li>
-            </ul>
-
-            <h2>2. Bilgilerin Kullanımı</h2>
-            <p>Toplanan bilgiler aşağıdaki amaçlarla kullanılır:</p>
-            <ul>
-                <li>Uygulama hizmetlerinin sağlanması ve iyileştirilmesi</li>
-                <li>Kullanıcı hesabınızın yönetimi ve güvenliği</li>
-                <li>Teknik destek sağlanması</li>
-                <li>Uygulama güvenliğinin korunması</li>
-                <li>Yasal yükümlülüklerin yerine getirilmesi</li>
-            </ul>
-
-            <h2>3. Bilgi Paylaşımı</h2>
-            <p>Kişisel bilgileriniz üçüncü taraflarla <strong>paylaşılmaz veya satılmaz</strong>. Aşağıdaki durumlar
-                hariç:</p>
-            <ul>
-                <li>Yasal zorunluluklar gerektirdiğinde (mahkeme kararı vb.)</li>
-                <li>Hizmet sağlayıcılarımız ile yalnızca hizmet sunmak amacıyla (örn: veritabanı barındırma)</li>
-                <li>Açık rızanız olduğunda</li>
-            </ul>
-
-            <h2>4. Üçüncü Taraf Hizmetler</h2>
-            <p>Uygulamamız aşağıdaki üçüncü taraf hizmetleri kullanmaktadır:</p>
-            <ul>
-                <li><strong>Supabase:</strong> Veritabanı ve kimlik doğrulama hizmetleri</li>
-                <li><strong>Google AdMob:</strong> Reklam gösterimi (GDPR ve ATT uyumlu)</li>
-                <li><strong>Apple StoreKit:</strong> Uygulama içi satın almalar</li>
-                <li><strong>Apple Sign In:</strong> Sosyal giriş seçeneği</li>
-            </ul>
-
-            <h2>5. Veri Güvenliği</h2>
-            <p>Verilerinizin güvenliği için aşağıdaki önlemler alınmıştır:</p>
-            <ul>
-                <li>SSL/TLS şifreleme ile güvenli veri iletimi</li>
-                <li>Şifrelenmiş veritabanı depolama</li>
-                <li>Düzenli güvenlik denetimleri</li>
-                <li>Erişim kontrolü ve yetkilendirme</li>
-            </ul>
-            <p>Ancak internet üzerinden yapılan hiçbir veri iletiminin %100 güvenli olmadığını hatırlatmak isteriz.</p>
-
-            <h2>6. Veri Saklama</h2>
-            <p>Verileriniz hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde:</p>
-            <ul>
-                <li>Tüm kişisel verileriniz 30 gün içinde kalıcı olarak silinir</li>
-                <li>Analiz geçmişiniz ve raporlarınız silinir</li>
-                <li>Anonim istatistiksel veriler korunabilir</li>
-            </ul>
-
-            <h2>7. Kullanıcı Hakları</h2>
-            <p>KVKK ve GDPR kapsamında aşağıdaki haklara sahipsiniz:</p>
-            <ul>
-                <li>Verilerinize erişim talep etme</li>
-                <li>Verilerinizin düzeltilmesini isteme</li>
-                <li>Hesabınızı ve verilerinizi silme</li>
-                <li>Veri taşıma talep etme</li>
-                <li>İşleme itiraz etme</li>
-            </ul>
-            <p>Bu haklarınızı kullanmak için <a href="mailto:ersah.dalganoglu@gmail.com">ersah.dalganoglu@gmail.com</a>
-                adresine e-posta gönderebilirsiniz.</p>
-
-            <h2>8. Çerezler ve İzleme</h2>
-            <p>Ekspera mobil uygulaması web tabanlı çerezler kullanmaz. Ancak uygulama performansını ölçmek için anonim
-                analitik veriler toplanabilir.</p>
-
-            <h2>9. Çocukların Gizliliği</h2>
-            <p>Ekspera 13 yaşından küçük çocuklardan bilerek bilgi toplamaz. Böyle bir durum fark ederseniz lütfen
-                bizimle iletişime geçin.</p>
-
-            <h2>10. Politika Değişiklikleri</h2>
-            <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinde ve bu sayfada
-                bildirilecektir. Son güncelleme tarihi her zaman sayfanın üstünde gösterilir.</p>
-
-            <h2>11. İletişim</h2>
-            <p>Gizlilik ile ilgili sorularınız için:</p>
-            <ul>
-                <li><strong>E-posta:</strong> <a href="mailto:ersah.dalganoglu@gmail.com">ersah.dalganoglu@gmail.com</a>
-                </li>
-            </ul>
+            <nav class="nav-main" id="mainNav">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="index.html#features" class="nav-link">Özellikler</a>
+                <a href="index.html#faq" class="nav-link">SSS</a>
+                <a href="privacy.html" class="nav-link active">Gizlilik</a>
+                <a href="terms.html" class="nav-link">Koşullar</a>
+            </nav>
         </div>
+    </header>
 
-        <footer class="footer">
-            <p>© 2026 Ekspera. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="index.html">Destek Merkezi</a>
-                <a href="terms.html">Kullanım Koşulları</a>
-                <a href="delete-account.html">Hesap Silme</a>
+    <main class="content-page">
+        <div class="container">
+            <div class="content-header">
+                <h1>Gizlilik Politikası</h1>
+                <p class="content-meta">Son güncelleme: Ocak 2026</p>
             </div>
-        </footer>
-    </div>
+
+            <div class="content-body">
+                <div class="highlight-box">
+                    <p><i class="fas fa-lock"></i> Ekspera olarak gizliliğinizi ciddiye alıyoruz. Bu politika, kişisel
+                        verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
+                </div>
+
+                <h2>1. Toplanan Bilgiler</h2>
+                <p>Ekspera uygulamasını kullandığınızda aşağıdaki bilgiler toplanabilir:</p>
+                <ul>
+                    <li><strong>Hesap Bilgileri:</strong> E-posta adresi, ad, profil fotoğrafı (isteğe bağlı)</li>
+                    <li><strong>Kullanım Verileri:</strong> Uygulama içi etkileşimler, analiz geçmişi, oluşturulan
+                        raporlar</li>
+                    <li><strong>Cihaz Bilgileri:</strong> Cihaz tipi, işletim sistemi versiyonu, uygulama versiyonu</li>
+                    <li><strong>Konum Verileri:</strong> Sadece analiz için girilen bölge bilgileri (GPS verisi
+                        toplanmaz)</li>
+                </ul>
+
+                <h2>2. Bilgilerin Kullanımı</h2>
+                <p>Toplanan bilgiler aşağıdaki amaçlarla kullanılır:</p>
+                <ul>
+                    <li>Uygulama hizmetlerinin sağlanması ve iyileştirilmesi</li>
+                    <li>Kullanıcı hesabınızın yönetimi ve güvenliği</li>
+                    <li>Teknik destek sağlanması</li>
+                    <li>Uygulama güvenliğinin korunması</li>
+                    <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+                </ul>
+
+                <h2>3. Bilgi Paylaşımı</h2>
+                <p>Kişisel bilgileriniz üçüncü taraflarla <strong>paylaşılmaz veya satılmaz</strong>. Aşağıdaki durumlar
+                    hariç:</p>
+                <ul>
+                    <li>Yasal zorunluluklar gerektirdiğinde (mahkeme kararı vb.)</li>
+                    <li>Hizmet sağlayıcılarımız ile yalnızca hizmet sunmak amacıyla (örn: veritabanı barındırma)</li>
+                    <li>Açık rızanız olduğunda</li>
+                </ul>
+
+                <h2>4. Üçüncü Taraf Hizmetler</h2>
+                <p>Uygulamamız aşağıdaki üçüncü taraf hizmetleri kullanmaktadır:</p>
+                <ul>
+                    <li><strong>Supabase:</strong> Veritabanı ve kimlik doğrulama hizmetleri</li>
+                    <li><strong>Google AdMob:</strong> Reklam gösterimi (GDPR ve ATT uyumlu)</li>
+                    <li><strong>Apple StoreKit:</strong> Uygulama içi satın almalar</li>
+                    <li><strong>Apple Sign In:</strong> Sosyal giriş seçeneği</li>
+                </ul>
+
+                <h2>5. Veri Güvenliği</h2>
+                <p>Verilerinizin güvenliği için aşağıdaki önlemler alınmıştır:</p>
+                <ul>
+                    <li>SSL/TLS şifreleme ile güvenli veri iletimi</li>
+                    <li>Şifrelenmiş veritabanı depolama</li>
+                    <li>Düzenli güvenlik denetimleri</li>
+                    <li>Erişim kontrolü ve yetkilendirme</li>
+                </ul>
+                <p>Ancak internet üzerinden yapılan hiçbir veri iletiminin %100 güvenli olmadığını hatırlatmak isteriz.
+                </p>
+
+                <h2>6. Veri Saklama</h2>
+                <p>Verileriniz hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde:</p>
+                <ul>
+                    <li>Tüm kişisel verileriniz 30 gün içinde kalıcı olarak silinir</li>
+                    <li>Analiz geçmişiniz ve raporlarınız silinir</li>
+                    <li>Anonim istatistiksel veriler korunabilir</li>
+                </ul>
+
+                <h2>7. Kullanıcı Hakları</h2>
+                <p>KVKK ve GDPR kapsamında aşağıdaki haklara sahipsiniz:</p>
+                <ul>
+                    <li>Verilerinize erişim talep etme</li>
+                    <li>Verilerinizin düzeltilmesini isteme</li>
+                    <li>Hesabınızı ve verilerinizi silme</li>
+                    <li>Veri taşıma talep etme</li>
+                    <li>İşleme itiraz etme</li>
+                </ul>
+                <p>Bu haklarınızı kullanmak için <a
+                        href="mailto:ersah.dalganoglu@gmail.com">ersah.dalganoglu@gmail.com</a> adresine e-posta
+                    gönderebilirsiniz.</p>
+
+                <h2>8. Çerezler ve İzleme</h2>
+                <p>Ekspera mobil uygulaması web tabanlı çerezler kullanmaz. Ancak uygulama performansını ölçmek için
+                    anonim analitik veriler toplanabilir.</p>
+
+                <h2>9. Çocukların Gizliliği</h2>
+                <p>Ekspera 13 yaşından küçük çocuklardan bilerek bilgi toplamaz. Böyle bir durum fark ederseniz lütfen
+                    bizimle iletişime geçin.</p>
+
+                <h2>10. Politika Değişiklikleri</h2>
+                <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinde ve bu
+                    sayfada bildirilecektir. Son güncelleme tarihi her zaman sayfanın üstünde gösterilir.</p>
+
+                <h2>11. İletişim</h2>
+                <p>Gizlilik ile ilgili sorularınız için:</p>
+                <ul>
+                    <li><strong>E-posta:</strong> <a
+                            href="mailto:ersah.dalganoglu@gmail.com">ersah.dalganoglu@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Ekspera">
+                </div>
+
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Ana Sayfa</a>
+                    <a href="privacy.html" class="footer-link">Gizlilik Politikası</a>
+                    <a href="terms.html" class="footer-link">Kullanım Koşulları</a>
+                    <a href="delete-account.html" class="footer-link">Hesap Silme</a>
+                </div>
+            </div>
+
+            <p class="footer-copy">
+                © 2026 Ekspera. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>
